@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário do Felício - Desafio 4x4</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 420px;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+        .header {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 20px;
+        }
+        .vibe-message {
+            font-size: 16px;
+            color: #ff6b6b;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0 0 20px 0;
+            line-height: 1.4;
+            padding: 10px;
+            background-color: #fff0f0;
+            border-radius: 8px;
+        }
+        .details {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            background: #fdfdfd;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+        }
+        .details p {
+            margin: 8px 0;
+        }
+        .details strong {
+            color: #ff6b6b;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 6px;
+            border-left: 4px solid #ff6b6b;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+        .checkbox-group input {
+            width: 20px;
+            height: 20px;
+            accent-color: #ff6b6b;
+        }
+        .btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #ff5252;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <h1>Aniversário do Felício 🏐</h1>
+            <p>Desafio 4x4 na Areia & Churrasco</p>
+        </div>
+        
+        <div class="content">
+            
+            <div class="vibe-message">
+                "A ideia é se divertir e compartilhar bons momentos com um esporte que amamos em comum: o vôlei de praia. Então só boraaaaaaaaaaa!"
+            </div>
+
+            <div class="details">
+                <p><strong>📅 Data:</strong> 19 de Abril</p>
+                <p><strong>📍 Local:</strong> Arena MVP</p>
+                <p><strong>🎟️ Day Use:</strong> R$ 10,00</p>
+                <p><strong>🥩 Regra do Churrasco:</strong> Levar 1kg de carne</p>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                
+                <p><strong>🔥 10h:</strong> Fogo na churrasqueira (Só chegar!)</p>
+                <p><strong>🏐 12h:</strong> Início do Torneio</p>
+
+                <div class="highlight">
+                    🏆 <strong>Dinâmica do Torneio:</strong> Não teremos times formados previamente! Os times serão montados na hora, pelo Prof. Leandro. Haverá troféus para o 1º, 2º e 3º colocados! A ideia é se divertir, por isso não se preocupe com a competição, vamos ser felizes e lembrar de quando começamos nesse esporte que amamos.
+                </div>
+            </div>
+
+            <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbwRwlVgOUBQJspaa-soV2iM8l-qOb6R4C0e04J_F28AbLK1vufutzTUppNdVEXgG3nn/exec" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Como devemos te chamar?" required>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="vaiJogar" name="vaiJogar" value="Sim">
+                    <label for="vaiJogar" style="margin: 0; font-weight: normal; font-size: 15px;">Vou jogar o Desafio 4x4!</label>
+                </div>
+
+                <button type="submit" class="btn">Confirmar Presença</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
